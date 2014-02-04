@@ -8,6 +8,13 @@ Overview
 
 Inspired by [node-mediainfo](https://github.com/deoxxa/node-mediainfo) this module provides an interface to the `mediainfo` command, it returns the common properties of a video or movie file in a JSON object.
 
+Install
+--------
+
+```
+npm install mimovie
+```
+
 Usage
 -----
 
