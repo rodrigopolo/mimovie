@@ -1,0 +1,39 @@
+{
+  "name": "mimovie",
+  "description": "Wrapper around the `mediainfo' for obtaining information about movie and video files",
+  "version": "0.0.1",
+  "author": {
+    "name": "Rodrigo Polo",
+    "url": "http://rodrigopolo.com/"
+  },
+  "url": "http://github.com/deoxxa/node-mediainfo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/deoxxa/node-mediainfo.git"
+  },
+  "keywords": [
+    "mediainfo",
+    "media",
+    "audio",
+    "video",
+    "movie",
+    "mkv",
+    "m4v",
+    "mp4",
+    "mov",
+    "avi"
+  ],
+  "main": "./lib/mimovie",
+  "engines": {
+    "node": ">=0.6.11"
+  },
+  "dependencies": {
+    "xml2js": "~0.4.1"
+  },
+  "readme": "mimovie\n=======\n\nWrapper around the `mediainfo' for obtaining information about movie and video files\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/deoxxa/node-mediainfo/issues"
+  }
+}
