@@ -25,7 +25,7 @@ A Node.js/MongoDB movie library creator.
 
    ```
    git clone https://github.com/rodrigopolo/movielib.git
-     cd movielib
+   cd movielib
    ```
 3. Install dependencies
 
