@@ -1,113 +1,68 @@
-mimovie
-=======
+#movielib
 
-Wrapper around the `mediainfo' for obtaining information about movie and video files
+A Node.js/MongoDB movie library creator.
 
-Overview
---------
+####Requirements:
 
-Inspired by [node-mediainfo](https://github.com/deoxxa/node-mediainfo) this module provides an interface to the `mediainfo` command, it returns the common properties of a video or movie file in a JSON object.
+* [Node.js](http://nodejs.org/download/)  
+  Download and install Node.js  
+* [MongoDB](http://www.mongodb.org/downloads)  
+  Download MongoDB, you can install it or add the bin path to your environment path.  
+* [MediaInfo](http://mediaarea.net/en/MediaInfo/Download)  
+  Download MediaInfo, you can install it or add the bin path to your environment path.  
+* [The Movie Database API Key](https://www.themoviedb.org)
 
-Install
---------
 
-```
-npm install mimovie
-```
+####Steps:
 
-Usage
------
+1. Obtain your API Key
+  * Register on: https://www.themoviedb.org/account/signup
+  * Go to your account: https://www.themoviedb.org/account/
+  * Click on the link "API".
+  * Generate a new API key.
+  * Follow the steps until you get your key.
+2. Clone github repository, enter the repo directory.  
 
-The module exposes just one function, which has a signature of:
+   ```
+   git clone https://github.com/rodrigopolo/movielib.git
+     cd movielib
+   ```
+3. Install dependencies
 
-`mimovie("/path/to/video_file", callback)`
+   ```
+   npm install
+   ```
+4. Create a config file from the example file  
 
-The callback function is called, in familiar node fashion, with two arguments.
-The first is an Error object on error, or null on success. The second argument is an object with all the video/movie information as a JSON object.
+   ```
+   cp config-example.js config.js
+   ```
+5. Add your movie database key to the `config.js`.
+6. Add your movie folder path to the `config.js`.
+7. Run the main.js script:  
 
-It's really easier to just see the output, so here:
+   ```
+   node main.js
+   ```
+8. Enjoy!
 
-```
-{
-	video_tracks: [{
-		width: 1280,
-		height: 720,
-		codec: 'AVC',
-		profile: 'High@L4.0',
-		video_bitrate: 912222,
-		fps: 23.976
-	}],
-	audio_tracks: [{
-		bitrate: 163836,
-		bitrate_mode: 'VBR',
-		channels: 2,
-		sammple_rate: 48000,
-		codec: 'AAC',
-		lang: 'en'
-	}, {
-		bitrate: 448000,
-		bitrate_mode: 'CBR',
-		channels: 6,
-		sammple_rate: 48000,
-		codec: 'AC-3',
-		lang: 'en',
-		channels_pos: 'Front: L C R, Side: L R, LFE'
-	}],
-	subtitles: ['es'],
-	bitrate: 1533377,
-	path: './test/movie.m4v',
-	size: 878363651,
-	duration: 4582635
-}
-```
-
-Example
 -------
 
-```javascript
-var mimovie = require("mimovie");
+## License
 
-mimovie("/path/to/movie.m4v", function(err, res) {
-  if (err) {
-    return console.log(err);
-  }
+Copyright 2017 Ry Rodrigo Polo - http://rodrigopolo.com
 
-  console.log(res);
-});
-```
+This software is licensed under the Apache License, Version 2.0 (the "Apache License") or the GNU
+General Public License version 2 (the "GPL License"). You may choose either license to govern your
+use of this software only upon the condition that you accept all of the terms of either the Apache
+License or the GPL License.
 
-Requirements
-------------
+You may obtain a copy of the Apache License and the GPL License in the LICENSE file, or at:
 
-The `mediainfo` command has to be available somewhere in the PATH of the user node is running as.
+http://www.apache.org/licenses/LICENSE-2.0
+http://www.gnu.org/licenses/gpl-2.0.html
 
-License
--------
-
-(The MIT License)
-
-Copyright (c) by Rodrigo Polo <rodrigo.polo@gmail.com>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-Contact
--------
-
-* GitHub ([rodrigopolo](http://github.com/rodrigopolo/))
-* Twitter ([@rodrigopolo](http://twitter.com/rodrigopolo))
+Unless required by applicable law or agreed to in writing, software distributed under the Apache License
+or the GPL Licesnse is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied. See the Apache License and the GPL License for the specific language governing
+permissions and limitations under the Apache License and the GPL License.
