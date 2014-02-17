@@ -41,7 +41,7 @@ It's really easier to just see the output, so here:
     audio_tracks: [{
         ch: 2,
         ch_pos: 'Front: L R',
-        sammple_rate: 48000,
+        sample_rate: 48000,
         codec: 'AAC LC',
         bitrate: 163836,
         bitrate_mode: 'VBR',
@@ -49,7 +49,7 @@ It's really easier to just see the output, so here:
     }, {
         ch: 6,
         ch_pos: 'Front: L C R, Side: L R, LFE',
-        sammple_rate: 48000,
+        sample_rate: 48000,
         codec: 'AC3',
         bitrate: 448000,
         bitrate_mode: 'CBR',
@@ -60,6 +60,10 @@ It's really easier to just see the output, so here:
     path: './test/movie.m4v',
     size: 878363651,
     duration: 4582635,
+    encoded: 'UTC 2013-07-25 08:39:20',
+    tagged: 'UTC 2013-09-19 00:54:42',
+    created: 'UTC 2014-02-04 22:15:33.300',
+    modified: 'UTC 2013-09-19 00:54:42.000',
     menu: false
 }
 ```
