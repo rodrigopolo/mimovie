@@ -60,10 +60,10 @@ It's really easier to just see the output, so here:
     path: './test/movie.m4v',
     size: 878363651,
     duration: 4582635,
-    encoded: 'UTC 2013-07-25 08:39:20',
-    tagged: 'UTC 2013-09-19 00:54:42',
-    created: 'UTC 2014-02-04 22:15:33.300',
-    modified: 'UTC 2013-09-19 00:54:42.000',
+    encoded: '2013-07-25T08:39:20Z',
+    tagged: '2013-09-19T00:54:42Z',
+    created: '2014-02-04T22:15:33.300Z',
+    modified: '2013-09-19T00:54:42.000Z',
     menu: false
 }
 ```
