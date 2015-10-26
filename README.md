@@ -1,12 +1,12 @@
 mimovie
 =======
 
-Wrapper around the `mediainfo' for obtaining information about movie and video files
+Wrapper around the `mediainfo' for obtaining information about multimedia files.
 
 Overview
 --------
 
-Inspired by [node-mediainfo](https://github.com/deoxxa/node-mediainfo) this module provides an interface to the `mediainfo` command, it returns the common properties of a video or movie file in a JSON object.
+Inspired by [node-mediainfo](https://github.com/deoxxa/node-mediainfo) this module provides an interface to the `mediainfo` command, it returns the common properties of a video or movie file in a JSON object, it uses a custom mediainfo template that you can change.
 
 Install
 --------
@@ -23,70 +23,58 @@ The module exposes just one function, which has a signature of:
 `mimovie("/path/to/video_file", callback)`
 
 The callback function is called, in familiar node fashion, with two arguments.
-The first is an Error object on error, or null on success. The second argument is an object with all the video/movie information as a JSON object.
+The first is an Error object on error, or null on success. The second argument is an object or array of objects with all the video/movie information.
 
 It's really easier to just see the output, so here:
 
 ```javascript
-{
-    video_tracks: [{
-        width: 1280,
-        height: 720,
-        codec: 'AVC',
-        fps: 23.976,
-        bitrate: 912222,
-        profile: 'High@L4.0',
-        aspect: '16:9'
-    }],
-    audio_tracks: [{
-        ch: 2,
-        ch_pos: 'Front: L R',
-        sample_rate: 48000,
-        codec: 'AAC LC',
-        bitrate: 163836,
-        bitrate_mode: 'VBR',
-        lang: 'en'
-    }, {
-        ch: 6,
-        ch_pos: 'Front: L C R, Side: L R, LFE',
-        sample_rate: 48000,
-        codec: 'AC3',
-        bitrate: 448000,
-        bitrate_mode: 'CBR',
-        lang: 'en'
-    }],
-    subtitles: ['es'],
-    bitrate: 1533377,
-    path: './test/movie.m4v',
-    size: 878363651,
-    duration: 4582635,
-    encoded: '2013-07-25T08:39:20Z',
-    tagged: '2013-09-19T00:54:42Z',
-    created: '2014-02-04T22:15:33.300Z',
-    modified: '2013-09-19T00:54:42.000Z',
-    menu: false
-}
+{ General: 
+   { path: './test/movie.m4v',
+     size: 79371001,
+     bitrate: 10572228,
+     duration: 60060,
+     modified: 'UTC 2015-10-26 00:14:01',
+     encoded: 'UTC 1904-01-01 00:00:00',
+     tagged: 'UTC 1904-01-01 00:00:00',
+     menu: false },
+  Video: 
+   [ { width: 2560,
+       height: 1440,
+       codec: 'AVC',
+       fps: 29.97,
+       bitrate: 9998000,
+       profile: 'Main@L4',
+       aspect: '16:9' } ],
+  Audio: 
+   [ { ch: 2,
+       ch_pos: 'Front: L R',
+       sample_rate: '44100',
+       codec: 'AAC LC',
+       bitrate: 128036,
+       bitrate_mode: 'CBR',
+       lang: false } ] }
 ```
 
 Example
 -------
 
 ```javascript
-var mimovie = require("mimovie");
+var mimovie = require("mimovie"),
+    util = require("util");
 
-mimovie("/path/to/movie.m4v", function(err, res) {
-  if (err) {
-    return console.log(err);
-  }
-
-  console.log(res);
+mimovie("./test/movie.m4v", function(err, res) {
+    if (err) {
+        console.log(err);
+    }else{
+        console.log(util.inspect(res, null, null, true));
+    }
 });
 ```
 
 Requirements
 ------------
 
-The `mediainfo` command has to be available somewhere in the PATH of the user node is running as.
+The `mediainfo` CLI has to be available somewhere in the system `PATH`.
 
 License
 -------

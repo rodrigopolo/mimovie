@@ -6,7 +6,7 @@ Page_End;
 File;
 File_Begin;{\n
 File_Middle;,\n
-File_End;}
+File_End;}\n\n\n
 ;
 General;      "path": "%CompleteName%",\n      "size": %FileSize%,\n      "bitrate": %OverallBitRate%,\n      "duration": %Duration%,\n      "created": "%File_Created_Date%",\n      "modified": "%File_Modified_Date%",\n      "encoded": "%Encoded_Date%",\n      "tagged": "%Tagged_Date%",\n      "menu": $if(%MenuCount%,true,false)\n
 General_Begin;     "General": {\n
