@@ -9,17 +9,17 @@ File_Middle;,\n
 File_End;}\n\n\n
 ;
 General;      "path": "%CompleteName%",\n      "size": %FileSize%,\n      "bitrate": %OverallBitRate%,\n      "duration": %Duration%,\n      "created": "%File_Created_Date%",\n      "modified": "%File_Modified_Date%",\n      "encoded": "%Encoded_Date%",\n      "tagged": "%Tagged_Date%",\n      "menu": $if(%MenuCount%,true,false)\n
-General_Begin;     "General": {\n
+General_Begin;     "general": {\n
 General_Middle;
 General_End;    }\n
 ;
 Video;      {\n          "width": %Width%,\n          "height": %Height%,\n          "codec": "%Format%",\n          "fps": $if(%FrameRate%,%FrameRate%,false),\n          "bitrate": $if(%BitRate%,%BitRate%,false),\n          "profile":$if(%Format_Profile%, "%Format_Profile%", false),\n          "aspect":$if(%DisplayAspectRatio%, "%DisplayAspectRatio/String%", false)\n      }
-Video_Begin;     ,"Video": [\n
+Video_Begin;     ,"video": [\n
 Video_Middle;,\n
 Video_End;\n    ]\n
 ;
 Audio;      {\n          "ch": %Channel(s)%,\n          "ch_pos": "%ChannelPositions%",\n          "sample_rate": "%SamplingRate%",\n          "codec": "%Codec%",\n          "bitrate": $if(%BitRate%,%BitRate%,false),\n          "bitrate_mode": "$if(%BitRate_Mode%,%BitRate_Mode%,false)",\n          "lang": $if(%Language%, "%Language%",false)\n      }
-Audio_Begin;     ,"Audio": [\n
+Audio_Begin;     ,"audio": [\n
 Audio_Middle;,\n
 Audio_End;\n    ]\n
 ;

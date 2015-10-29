@@ -1,7 +1,7 @@
 {
   "name": "mimovie",
   "description": "Wrapper around the `mediainfo' for obtaining information about multimedia files.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": {
     "name": "Rodrigo Polo",
     "url": "http://rodrigopolo.com/"

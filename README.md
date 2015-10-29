@@ -28,7 +28,7 @@ The first is an Error object on error, or null on success. The second argument i
 It's really easier to just see the output, so here:
 
 ```javascript
-{ General: 
+{ general: 
    { path: './test/movie.m4v',
      size: 79371001,
      bitrate: 10572228,
@@ -37,7 +37,7 @@ It's really easier to just see the output, so here:
      encoded: 'UTC 1904-01-01 00:00:00',
      tagged: 'UTC 1904-01-01 00:00:00',
      menu: false },
-  Video: 
+  video: 
    [ { width: 2560,
        height: 1440,
        codec: 'AVC',
@@ -45,7 +45,7 @@ It's really easier to just see the output, so here:
        bitrate: 9998000,
        profile: 'Main@L4',
        aspect: '16:9' } ],
-  Audio: 
+  audio: 
    [ { ch: 2,
        ch_pos: 'Front: L R',
        sample_rate: '44100',
