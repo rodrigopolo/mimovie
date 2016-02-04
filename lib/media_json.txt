@@ -13,7 +13,7 @@ General_Begin;     "general": {\n
 General_Middle;
 General_End;    }\n
 ;
-Video;      {\n          "width": %Width%,\n          "height": %Height%,\n          "codec": "%Format%",\n          "fps": $if(%FrameRate%,%FrameRate%,false),\n          "bitrate": $if(%BitRate%,%BitRate%,false),\n          "profile":$if(%Format_Profile%, "%Format_Profile%", false),\n          "aspect":$if(%DisplayAspectRatio%, "%DisplayAspectRatio/String%", false)\n      }
+Video;      {\n          "width": %Width%,\n          "height": %Height%,\n          "codec": "%Format%",\n          "fps": $if(%FrameRate%,%FrameRate%,false),\n          "bitrate": $if(%BitRate%,%BitRate%,false),\n          "profile":$if(%Format_Profile%, "%Format_Profile%", false),\n          "settings":$if(%Format_Settings%, "%Format_Settings%", false),\n          "aspect":$if(%DisplayAspectRatio%, "%DisplayAspectRatio/String%", false)\n      }
 Video_Begin;     ,"video": [\n
 Video_Middle;,\n
 Video_End;\n    ]\n
