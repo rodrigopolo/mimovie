@@ -76,6 +76,11 @@ Requirements
 
 The `mediainfo` CLI has to be available somewhere in the system `PATH`.
 
+-------
+
+### Donations
+[PayPal](http://paypal.me/rodrigopolo)
+
 License
 -------
 
